@@ -1,0 +1,178 @@
+/* Styles go here */
+html {
+  font-family:"Signika",sans-serif;
+  /* color: grey; */
+}
+
+.article {
+  margin: 10%;
+  margin-top: 7%;
+}
+
+@media screen and (max-width: 400px) {
+    .article {
+        margin: 5%;
+    }
+}
+@media screen and (min-width: 900px) {
+    .article {
+        margin-right: 40%;
+    }
+}
+
+table {
+  float: left;
+}
+
+table, th, td {
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+th, td {
+  padding: 1em;
+}
+th {
+    background-color: #555;
+    color: white;
+}
+.hi {
+  color: black;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.yes {
+  color: #00DD00;
+}
+
+.no {
+  color: red;
+}
+
+.anchor {
+    padding-top: 50px;
+    margin-top: -50px;
+}
+
+img {
+  width: 60%;
+}
+
+.banner {
+  width: 100%;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 8.5%;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.limenu {
+    float: left;
+}
+
+.limenu a {
+    display: block;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+}
+
+/* animation */
+@import "compass/css3";
+
+#icon_Broker {
+  opacity: 0;
+}
+
+/* arrowhead bottom */
+#marker4846 {
+  opacity: 1;
+}
+
+/* top arrowhead */
+#Arrow1Lend {
+/*   opacity: 1; */
+/*   animation: reveal 1s ease; */
+/*   transformX(-200) */
+}
+
+/* #layer1 {
+	opacity: 0;
+} */
+
+#icon_Broker, #icon_Client, #text_Broker, #text_Client {
+  animation: reveal 2s ease;
+/*   opacity: 0; */
+}
+
+#line_Top {
+  stroke-dasharray: 380;
+  stroke-dashoffset: 380;
+  animation: arrow-run1 4s ease infinite;
+  stroke-dashoffset: 0;
+}
+
+#line_Bottom {
+  stroke-dasharray: 380;
+  stroke-dashoffset: 380;
+  animation: arrow-run2 4s ease infinite;
+  stroke-dashoffset: 0;
+}
+
+#text_PacketTop {
+  opacity: 0;
+  animation: reveal 4s ease;
+  opacity: 1;
+/*   animation-delay: 2s; */
+}
+
+#text_PacketBottom {
+  opacity: 0;
+  animation: reveal-delay 4s ease;
+  opacity: 1;
+}
+
+@keyframes arrow-run1 {
+  	0% { stroke-dashoffset: 380; }
+	 50% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes arrow-run2 {
+    0% { stroke-dashoffset: 380; }
+   50% { stroke-dashoffset: 380; }
+	100% { stroke-dashoffset: 0; }
+}
+
+@keyframes soft-flash {
+	0% { opacity: 0; }
+	82.5% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@keyframes reveal {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@keyframes reveal-delay {
+	0% { opacity: 0; }
+  50% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+#loader {
+/*   border: solid black 2px; */
+/*   -webkit-align-content: center; */
+  align-content: center;
+/*   top: 0; */
+}
