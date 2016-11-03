@@ -49,7 +49,13 @@ try{
 } catch (e) {
   document.getElementById("demo").innerHTML = "error: " + e
 }
-      
+
+try{
+  document.getElementById("date").innerHTML += xml.getElementsByTagName("WHOLE")[0].getAttribute("Date");
+} catch (e) {
+  document.getElementById("Date").innerHTML = "error: " + e
+}
+
 // document.getElementById("test_result").innerHTML = "bla";
 
 
