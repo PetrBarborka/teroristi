@@ -16,6 +16,19 @@ xhttp.send();
 return xhttp.responseXML;
 }
 
+function getWholenameElement(node){
+  var ua = window.navigator.userAgent;
+  var msie = ua.indexOf("MSIE ");
+  if (msie > 0) // running internet explorer
+  {
+    return node.getElemntsByTagName("WHOLENAME")[0].text
+  }
+  else
+  { 
+    return node.getElementsByTagName("WHOLENAME")[0].textContent
+  }
+}
+
 function getNames(xml) {
   var table="<table><tr><th>#</th><th>Name</th></tr>";
   var x = xml.getElementsByTagName("ENTITY");
@@ -25,7 +38,8 @@ function getNames(xml) {
     "</td><td>" +
     // x[i].getElementsByTagName("WHOLENAME")[0].childNodes[0].nodeValue +
       // x[i].childNodes[0].nodeName + x[i].childNodes[1].nodeName +
-      x[i].getElementsByTagName("WHOLENAME")[0].textContent +
+      //x[i].getElementsByTagName("WHOLENAME")[0].textContent +
+      getWholenameElement(x[i]) +
     "</td></tr>";
   }
   table += "</table>"
