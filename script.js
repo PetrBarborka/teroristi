@@ -21,7 +21,7 @@ else
 function getWholenameElement(node){
   var ua = window.navigator.userAgent;
   var msie = ua.indexOf("MSIE ");
-  var wn = node.getElemntsByTagName("WHOLENAME")[0]
+  var wn = node.getElementsByTagName("WHOLENAME")[0]
   if (msie > 0) // running internet explorer
   {
     return wn.text
