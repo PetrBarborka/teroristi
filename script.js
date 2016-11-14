@@ -5,15 +5,17 @@ function loadXMLDoc(dname)
 if (window.XMLHttpRequest)
 {
   xhttp=new XMLHttpRequest();
+  xhttp.open("GET",dname,false);
+  xhttp.send();
+  return xhttp.responseXML;
 }
 else
 {
   xhttp=new ActiveXObject("Microsoft.XMLDOM");
+  xhttp.async = "false";
+  return xhttp.loadXML(xhttp.responseText);
 }
 
-xhttp.open("GET",dname,false);
-xhttp.send();
-return xhttp.responseXML;
 }
 
 function getWholenameElement(node){
